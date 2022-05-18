@@ -1,0 +1,84 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@font-face {
+  font-family: gameFont;
+  src: url(./assets/Moonhouse-yE5M.ttf);
+}
+
+#locker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#health {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-family: gameFont;
+  text-shadow: 1px 1px #ffffffd0;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+#playergui {
+  position: absolute;
+  display: inline-flex;
+  bottom: 10px;
+  left: 35%;
+}
+
+#playergui > div {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+  border-radius: 25%;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  padding: 12px 12px;
+  align-items: center;
+  margin: 6px;
+  font-size: 20px;
+
+  color: aliceblue;
+  font-family: gameFont;
+}
+
+#itemName {
+  display: flex;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  padding: 12px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+  border: 2px solid white;
+  border-radius: 80%;
+  justify-content: center;
+  align-items: center;
+
+  font-family: gameFont;
+}
+
+#pointer {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  justify-content: center;
+  font-size: 100px;
+}
