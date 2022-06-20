@@ -21,16 +21,6 @@ canvas {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#health {
-  position: absolute;
-  text-align: center;
-  bottom: 10px;
-  left: 10px;
-  font-size: 20px;
-  font-family: gameFont;
-  text-shadow: 1px 1px #ffffffd0;
-}
-
 html::-webkit-scrollbar {
   display: none;
 }
@@ -39,7 +29,14 @@ html::-webkit-scrollbar {
   position: absolute;
   display: inline-flex;
   bottom: 10px;
-  left: 35%;
+  left: 50%;
+}
+
+.key {
+  width: 32;
+  height: 32;
+  color: aliceblue;
+  z-index: 100;
 }
 
 #playergui > div {
@@ -54,7 +51,6 @@ html::-webkit-scrollbar {
   align-items: center;
   margin: 6px;
   font-size: 20px;
-
   color: aliceblue;
   font-family: gameFont;
 }
@@ -81,4 +77,58 @@ html::-webkit-scrollbar {
   left: 50%;
   justify-content: center;
   font-size: 100px;
+}
+
+#timer {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  justify-content: center;
+  font-size: 30px;
+  color: aliceblue;
+  font-family: gameFont;
+}
+
+#finishBoard {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 800;
+  height: 600;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.199);
+  z-index: 1;
+}
+
+#finishBoard > div {
+  position: relative;
+  display: flex;
+  color: aliceblue;
+
+  justify-content: center;
+  font-family: gameFont;
+}
+
+#finishBoard > .title {
+  padding: 15px 15px;
+  font-size: 30px;
+}
+
+#finishBoard > .sub_title {
+  padding: 15px 15px;
+  font-size: 20px;
+}
+
+#finishBoard > .scoreboard_timer_last {
+  padding: 30px 30px;
+  padding-top: 100px;
+  font-size: 25;
+}
+
+#finishBoard > .scoreboard_timer {
+  padding: 30px 30px;
+  padding-top: 100px;
+  font-size: 25;
 }

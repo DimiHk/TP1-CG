@@ -5,10 +5,8 @@ export class ApplicationWorld {
     this.world = new CANNON.World({
       gravity: new CANNON.Vec3(gravityX, gravityY, gravityZ),
     });
-  }
-
-  addBody(body) {
-    this.world.addBody(body.getBody());
+    this.world.defaultContactMaterial.contactEquationStiffness = 1e9;
+    this.world.defaultContactMaterial.contactEquationRelaxation = 4;
   }
 
   getWorld() {

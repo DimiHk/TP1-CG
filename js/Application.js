@@ -13,10 +13,10 @@ export class Application {
 
   createScene() {
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(120, WIDTH / HEIGHT, 1, 500);
+    this.camera = new THREE.PerspectiveCamera(90, WIDTH / HEIGHT, 0.01, 500);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    this.camera.position.set(0, 100, 0);
+
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.BasicShadowMap;
 
@@ -39,15 +39,6 @@ export class Application {
     this.world.fixedStep();
 
     this.objects.forEach((object) => {
-      if (object.type === "Group" && object.body) {
-        object.position.copy(object.body.position);
-        object.quaternion.copy(object.body.quaternion);
-      }
-      if (object.type === "Object3D" && object.mesh.body) {
-        object.mesh.position.copy(object.mesh.body.position);
-        object.mesh.quaternion.copy(object.mesh.body.quaternion);
-      }
-
       object.update();
     });
 
